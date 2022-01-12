@@ -1,0 +1,112 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="fromToSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="fromValue" Type="InArgument(x:String)" />
+    <x:Property Name="from1" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>749.333333333333,565.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>fromToSequence_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="fromToSequence" sap:VirtualizedContainerService.HintSize="376,500.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="airportName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="colName" DisplayName="Get Attribute 'SELECT  from'" sap:VirtualizedContainerService.HintSize="334,204.666666666667" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+      <ui:GetAttribute.Result>
+        <OutArgument x:TypeArguments="x:String">[airportName]</OutArgument>
+      </ui:GetAttribute.Result>
+      <ui:GetAttribute.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2183e2e0-cd0a-4f71-b020-9f8a2fa3eb5a" InformativeScreenshot="71bd0d3781fcb1bf79afd6181aec4478" Selector="&lt;html title='BP Travel - Create Quote' /&gt;&lt;webctrl tableCol='2' tableRow='1' tag='SELECT' colName='Albania - Tirana (TIA)Andorra - Andorra (ALV)Austria - Graz (GRZ)Austria - Innsbruck (INN)Austria - Salzburg (SZG)Austria - Vienna (VIE)Belarus - Minsk (MSQ)Belgium - Antwerp (ANR)Belgium - Brussels (BRU)Belgium - Ghent (GNE)Belgium - Liege (LGG)Bulgaria - Sofia (SOF)Bulgaria - Varna (VAR)Bulgaria - Vidin (VID)Czech Republic - Prague (PRG)Denmark - Aarhus (AAR)Denmark - Copenhagen (CPH)Denmark - Esbjerg (EBJ)Estonia - Tallinn (QUF)Estonia - Tallinn (TLL)Finland - Helsinki (HEL)France - Bordeaux (BOD)France - Grenoble (GNB)France - Lyon (LYN)France - Marseille (MRS)France - Nantes (NTE)France - Nice (NCE)France - Paris (CDG)France - Paris (ORY)France - Strassburg (SXB)Georgia - Tbilisi (TBS)Germany - Berlin (BER)Germany - Cologne (CGN)Germany - Dortmund (DTM)Germany - Duesseldorf (DUS)Germany - Frankfurt (FRA)Germany - Hamburg (HAM)Germany - Munich (MUC)Greece - Athens (HEW)Greece - Chania (CHQ)Greece - Corfu (CFU)Hungary - Budapest (BUD)Iceland - Reykjavik (KEF)Ireland - Cork (ORK)Ireland - Dublin (DUB)Ireland - Shannon (SNN)Italy - Bologna (BLQ)Italy - Brescia (VBS)Italy - Florence (FLR)Italy - Milan (MIL)Italy - Naples (NAP)Italy - Rome (ROM)Italy - Turin (TRN)Italy - Venice (VCE)Kazakhstan - Astana (TSE)Kyrgyzstan - Bishkek (FRU)Latvia - Riga (RIX)Lithuania - Vilnius (VNO)Luxembourg - Luxembourg (LUX)Malta - Luga (MLA)Moldova - Chisinau (KIV)Montenegro - Podgorica (TGD)Netherlands - Amsterdam (AMS)Netherlands - Eindhoven (EIN)Netherlands - Maastricht (MST)Netherlands - Rotterdam (RTM)Norway - Bergen (BGO)Norway - Oslo (OSL)Poland - Gdansk (GDN)Poland - Krakau (KRK)Poland - Warsaw (WAW)Portugal - Faro (FAO)Portugal - Lisbon (LIS)Portugal - Porto (OPO)Romania - Bucharest (OTP)Russia - Irkutsk (IKT)Russia - Moscow (MOW)Russia - Moscow - Domodedovo (DME)Russia - Murmansk (MMK)Russia - St. Petersburg (LED)Slovakia - Bratislava (BTS)Spain - Barcelona (BCN)Spain - Bilbao (BIO)Spain - Madrid (MAD)Spain - Malaga (AGP)Spain - Sevilla (SVQ)Spain - Valencia (VLC)Sweden - Gothenburg (GOT)Sweden - Malmo (MMA)Sweden - Stockholm (STO)Switzerland - Basel (BSL)Switzerland - Berne (BRN)Switzerland - Geneva (GVA)Switzerland - Zurich (ZRH)Tajikistan - Dushanbe (DYU)Turkmenistan - Ashgabat (ASB)Ukraine - Kiev (KBP)Ukraine - Odessa (ODS)United Kingdom - Aberdeen (ABZ)United Kingdom - Belfast (BFS)United Kingdom - Birmingham (BHX)United Kingdom - Glasgow (GLA)United Kingdom - Liverpool (LPL)United Kingdom - London (LGW)United Kingdom - London (LHR)United Kingdom - Manchester (MAN)Uzbekistan - Tashkent (TAS)  ' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:GetAttribute.Target>
+    </ui:GetAttribute>
+    <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[from1]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.join("",Enumerable.ToArray(airportName.Substring(1,airportName.IndexOf("("+fromValue+")")-1).Reverse))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[from1]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.join("",Enumerable.ToArray(from1.Substring(1,from1.IndexOf(")")-1).Reverse))+"("+fromValue+")"]</InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>
